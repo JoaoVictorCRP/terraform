@@ -9,6 +9,7 @@ terraform {
     }
 }
 
+
 provider "aws" {
     region = var.location # Para obter o valor de uma variável, basta utilizar referenciar o nome da variável com "var"
 
@@ -19,4 +20,3 @@ provider "aws" {
         }
     }
 }
-
