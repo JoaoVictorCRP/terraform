@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "sa-east-1"
+  region = var.region
   default_tags {
     tags = {
       owner      = "Joao Victor Carrijo"
