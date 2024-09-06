@@ -11,6 +11,10 @@ variable "ownerName" {
     default = "Joao Victor Carrijo"
 }
 
+variable "instanceType" {
+    default = "t2.micro"
+}
+
 
 /* Blocos de variáveis possuem os seguintes argumentos:
 - default => Um valor padrão, que por consequência tornará a variável opcional.

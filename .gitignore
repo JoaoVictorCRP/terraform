@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 credentials.txt
 **/.terraform/*
 *.tfstate
 *.backup
 *.lock.hcl
 *.txt
-=======
-credentials.txt
->>>>>>> 0e1f6bbedb62a950288f262c0bfaaae5c31e3744
