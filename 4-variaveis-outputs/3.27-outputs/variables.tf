@@ -4,6 +4,11 @@ variable "instance_type" {
     type = string
 }
 
+variable "instance_count" {
+  description = "Número de instâncias a serem criadas"
+  default = 1
+}
+
 variable "ami_id" {
     default = "ami-0e4d230445076ef91"
     description = "ID da Imagem da máquina"
