@@ -8,7 +8,7 @@
 
 `terraform apply` => Realizar deploy.
 
-`terraforma apply {nome_do_arquivo}.out` => Realizar deploy baseado no plano de um arquivo de saída.
+`terraform apply {nome_do_arquivo}.out` => Realizar deploy baseado no plano de um arquivo de saída.
 
 `terraform destroy` => Realizar a destruição de um recurso.
 

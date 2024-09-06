@@ -4,3 +4,4 @@ credentials.txt
 *.backup
 *.lock.hcl
 *.txt
+*.pub
