@@ -9,7 +9,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "remote-state-terraform"    # bucket criado na última aula (está na pasta "../5.31-bucketVersionado/")
+    bucket = "joao-remote-state-terraform"    # bucket criado na última aula (está na pasta "../5.31-bucketVersionado/")
     key    = "aws-vpc/terraform.tfstate" # diretório do arquivo chave
     region = "sa-east-1"
   }

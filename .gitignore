@@ -5,3 +5,4 @@ credentials.txt
 *.lock.hcl
 *.txt
 *.pub
+aws-key

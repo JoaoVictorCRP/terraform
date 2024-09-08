@@ -19,3 +19,6 @@
 `terraform output` => Visualizar outputs
 
 `terraform output -raw {nome_da_variavel}` => Printa somente o valor da variavel, sem o nome dela. (<span style="color: red; font-weight:bold">Útil para passar valores de variáveis para outros arquivos</span>)
+
+## Aprendizagem Extra
+- Para gerar uma chave ssh no linux, utilize o comando: `ssh-keygen -f {nome_da_chave}`

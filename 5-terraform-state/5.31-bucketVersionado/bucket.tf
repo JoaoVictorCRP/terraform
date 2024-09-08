@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "bucket" {
-  bucket = "remote-state-terraform"
+  bucket = "joao-remote-state-terraform"
 }
 
 resource "aws_s3_bucket_versioning" "versioning_example" {
