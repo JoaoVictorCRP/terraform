@@ -12,7 +12,16 @@ São parametros que podemos adicionar a qualquer bloco de resource ou module, es
 
 - `provider` => Utilizado em ocasiões onde precisaremos de mais de um bloco de provider para diferentes recursos. Na AWS por exemplo, pra cada região devemos escrever um provider para cada região, então se quiser ter recursos em regiões distintas, você deve usar este meta-argument. 
 
-- `lifecycle` =>
+- `lifecycle` => Permite definir padrões do ciclo de vida de recurso, isto é, como ele vai reagir de acordo com certar mudanças no state, destruição ou criação de outros recursos associados a ele, dentre outras coisas. Veja alguns parâmetros:
+    - `create_before_destroy` => Quando o recurso que possui este parâmetro como True for destruído, um novo recurso com as exatas mesmas configurações será criado em seu lugar (muito útil para recursos críticos).
+
+    - `prevent_destroy` => Impede a destruição do recrusos, o que previne erros na automatização ou acidentes.
+
+    - `ignore_changes` => Ignora mudanças realizadas no console da plataforma de cloud computing, ficando somente as definições escritas em código TF.
+
+    - `replace_triggered_by` => Refaz o recurso quando qualquer item referenciado como gatilho mudar.
+
+
 
 ### Module
 - `depends_on` => Força a dependência a um outro bloco, isso evitará falhas relacionadas a ordem de execução dos módulos.
