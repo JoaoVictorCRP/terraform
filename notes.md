@@ -35,6 +35,10 @@
 - `show {recurso}`                => Mostra as informações de um recursos específico no state
 <br>
 
+## Desbloqueio do State
+Caso você de um `plan` o seu state fica em esatdo de lock até que você responda a mensagem de confirmação. Imagine que, por algum motivo, o terminal onde você havia dado o `plan` fechou, nesta situação, você estará bloqueado de fazer deploy do seu código terraform! Mas não se preocupe, é possível remover o lock com um comando simples:
+- `terraform force-unlock {id_do_lock}`
+
 ## Atualização de recursos
 `terraform import {recurso}.{nome_recurso} {id_recurso}` => Adicionar um recurso no state <span style="color: red">(também é possível adicionar via bloco import)</span>    
 exemplo: `terraform import aws_s3_bucket.bucket_3 joaovictor-terraform-commands-3`
