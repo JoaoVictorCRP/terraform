@@ -10,7 +10,7 @@ terraform {
 
   backend "s3" {
     bucket = "joao-remote-state-terraform"
-    key = "commands/terraform.tfsate"
+    key = "commands/terraform.tfsate" # Para configurar um backend dinâmico, este bloco deve estar vazio.
     region = "sa-east-1"
   }
 }
