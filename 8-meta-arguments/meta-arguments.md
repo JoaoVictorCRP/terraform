@@ -8,7 +8,7 @@ São parametros que podemos adicionar a qualquer bloco de resource ou module, es
 
 - `count` => Permite criar múltiplas cópias de um mesmo recurso. Ou seja, se um bloco incluir um argumento count cujo valor é um valor N, então o TF irá criar N instâncias.
 
-- `for_each` => 
+- `for_each` => Funciona de maneira semelhante ao count, no entanto, trabalha usando sets (ou hash-tables) para atribuir valores diferentes a cada um dos indíces.
 
 - `provider` =>
 
@@ -19,7 +19,7 @@ São parametros que podemos adicionar a qualquer bloco de resource ou module, es
 
 - `count` => Permite criar múltiplas cópias de um mesmo recurso. 
 
-- `for_each` =>
+- `for_each` => Funciona de maneira semelhante ao count, no entanto, trabalha usando sets(listas) ou maps(key-value) para atribuir valores diferentes a cada um dos indíces.
 
 - `provider` =>
 
@@ -30,6 +30,8 @@ São parametros que podemos adicionar a qualquer bloco de resource ou module, es
     - Já o `for_each` é utilizado para casos onde a diferença é um pouco mais complexa.
 
 - Para diferenciar cada indice de recurso criado pelo `count`, use a referenciação `${count.index}`
+
+- Para referenciar indices de um `for each` utilize a chave do índice correspondente.
 
 ## Read the Docs
 - [Depends_on](https://developer.hashicorp.com/terraform/language/meta-arguments/depends_on)
