@@ -57,3 +57,5 @@ Obs</span>: Para configurar um backend dinâmico, o bloco "backend" que fica no 
 
 ## Aprendizagem Extra
 - Para gerar uma chave ssh no linux, utilize o comando: `ssh-keygen -f {nome_da_chave}`
+
+- Para verificar os logs do user data é só conferir o arquivo `cloud-init-output.log`, que fica no diretório `/var/log`.
