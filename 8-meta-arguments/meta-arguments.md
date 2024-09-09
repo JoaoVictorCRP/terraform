@@ -10,7 +10,7 @@ São parametros que podemos adicionar a qualquer bloco de resource ou module, es
 
 - `for_each` => Funciona de maneira semelhante ao count, no entanto, trabalha usando sets (ou hash-tables) para atribuir valores diferentes a cada um dos indíces.
 
-- `provider` =>
+- `provider` => Utilizado em ocasiões onde precisaremos de mais de um bloco de provider para diferentes recursos. Na AWS por exemplo, pra cada região devemos escrever um provider para cada região, então se quiser ter recursos em regiões distintas, você deve usar este meta-argument. 
 
 - `lifecycle` =>
 
@@ -21,7 +21,7 @@ São parametros que podemos adicionar a qualquer bloco de resource ou module, es
 
 - `for_each` => Funciona de maneira semelhante ao count, no entanto, trabalha usando sets(listas) ou maps(key-value) para atribuir valores diferentes a cada um dos indíces.
 
-- `provider` =>
+- `providers` => No módulo, você pode estar utilizando multiplos providers para um só bloco. Isso pode ser usado quando é necessário migrar um recurso de uma região para outra, ou passar algum dado entre as regiões.
 
 ## Anotações
 - Um bloco de recurso ou módulo não pode ter ambos `count` e `for_each`, ou você coloca um ou coloca outro.
