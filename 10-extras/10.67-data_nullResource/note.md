@@ -1,0 +1,2 @@
+# Terraform_data (ou Null_resource)
+Blocos de recursos com o nome `terraform_data`, anteriormente `null_resource`, são partes do código que não geram uma entidade real na infraestrutura, mas podem executar provisioners, ou promover execuções condicionais, sem associar isso diretamente a um recurso específico.
