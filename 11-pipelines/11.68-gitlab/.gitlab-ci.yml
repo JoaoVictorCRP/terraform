@@ -1,0 +1,45 @@
+stages:
+- validate_plan
+- apply
+- destroy
+
+.template:
+  image: 
+    name: hashicorp/terraform:1.5.7 # imagem do terraform no docker
+    entrypoint: [""]
+  before_script:
+  - terraform init # comando que deve rodar antes do comando principal de cada job
+
+
+validate & plan:
+  extends: .template
+  stage: validate_plan
+  
+  script: # Script a ser executado nesse job (linha por linha)
+  - terraform validate
+  - terraform plan -out plan.out
+
+  cache:
+    key: plan
+    policy: push
+    paths:
+    - plan.out # faz o push (envio) do arquivo plan.out para outro job
+
+apply:
+  extends: .template
+  stage: apply
+  script:
+  - terraform apply plan.out
+  cache: # buscando o cache criado no job anterior
+    key: plan
+    policy: pull
+    paths:
+    - plan.out
+  when: manual # trigger manual para ocorrer o apply
+
+destroy:
+  extends: .template
+  stage: destroy
+  script:
+  - terraform destroy -auto-approve
+  when: manual # esse job tbm deve esperar por um trigger manual
