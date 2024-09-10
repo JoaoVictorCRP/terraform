@@ -40,7 +40,9 @@ São parametros que podemos adicionar a qualquer bloco de resource ou module, es
 
 - Para diferenciar cada indice de recurso criado pelo `count`, use a referenciação `${count.index}`
 
-- Para referenciar indices de um `for each` utilize a chave do índice correspondente.
+- Para referenciar indices de um `for_each` utilize a chave do índice correspondente.
+
+- Recursos que usam `for_each` são retornados como um mapa de objetos, portanto cuidado para não usar **[Splat expressions](../9-funcoes-e-expressoes/9.59-splatExpressions/splat.md)** com eles.
 
 ## Read the Docs
 - [Depends_on](https://developer.hashicorp.com/terraform/language/meta-arguments/depends_on)
