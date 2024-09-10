@@ -55,6 +55,12 @@ Para referenciar o arquivo de backend desejado, é só passar na hora de dar um 
 <span style="color: red; font-weight:bold">
 Obs</span>: Para configurar um backend dinâmico, o bloco "backend" que fica no bloco "terraform" deve estar vazio.
 
+## Console Terraform
+Para entrar no console do TF, bastar digitar `terraform console` no terminal, o console é o lugar ideal para testar funções e trechos de código.
+
+## Workspace
+O TF possui um esquema de branches, funciona de maneira semelhante ao git, aqui os chamamos de workspaces. Por padrão, todo código terraform é criado no workspace "default", mas você pode criar um outro usando `terraform workspace new {nome_do_novo_workspace}`. Para mais detalhes dos comandos, digite `terraform workspace --help`.
+
 ## Aprendizagem Extra
 - Para gerar uma chave ssh no linux, utilize o comando: `ssh-keygen -f {nome_da_chave}`
 
