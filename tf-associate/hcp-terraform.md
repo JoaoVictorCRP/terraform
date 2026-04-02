@@ -11,3 +11,17 @@
 - **Controle de acessos**: A versão cloud garante um controle fino de acessos em modelo RBAC, o que permite dar permissões granulares para usuário e equipes. É possível por exemplo, limitá-los de efetuar mudanças em determinado ambiente ou recurso.
 
 - **Definição de variáveis**: Também é possível definir as variáveis e seus valores diretamente no painel do Terraform HCP. Por este meio, você também pode definir variáveis sensíveis como write-only e rotacioná-las facilmente.
+
+## Como funciona?
+
+- Para conectar uma base de código terraform, basta criar um workspace no painel e conectar o repositório onde o código está hospedado. O Terraform HCP irá monitorar o repositório e executar os planos de acordo com as mudanças feitas no código.
+
+- O Terraform HCP também suporta a execução manual de planos, o que é útil para testar mudanças ou executar planos em branches específicas.
+
+# Terraform Enterprise
+
+- A HashiCorp também oferece uma versão on-premises do HCP Terraform, chamada Terraform Enterprise.
+
+- A principal diferença entre as duas é que a versão Entreprise é instalada e gerenciada pela própria organização, enquanto a versão Cloud é gerenciada pela HashiCorp. 
+
+- A versão Enterprise é ideal para empresas que possuem requisitos de segurança e conformidade rigorosos, ou que desejam ter controle total sobre seus dados e infraestrutura.
