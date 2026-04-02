@@ -1,6 +1,12 @@
-# <span style="color: purple; font-weight:bold"> Comandos do Terraform CLI </span>
+# Estudos do Terraform
 
-## Básicos
+- Este é o meu repositório de estudos do Terraform, aqui estão organizadas as anotações e códigos relacionados a esta poderosa ferramente de IaC.
+
+- Os tópicos são separados em módulos, baseados no curso da Udemy ["Terraform do Básico ao Avançado", do Daniel Gil](https://www.udemy.com/course/terraform-do-basico-ao-avancado/).
+
+## <span style="color: purple; font-weight:bold"> Comandos do Terraform CLI </span>
+
+### Básicos
 `terraform init` => Inicializar um repositório terraform na pasta qual você se encontra no momento
 
 `terraform plan` => Verificar alterações a serem realizadas na infraestrutura com o deploy do código.
