@@ -25,3 +25,9 @@
 - A principal diferença entre as duas é que a versão Entreprise é instalada e gerenciada pela própria organização, enquanto a versão Cloud é gerenciada pela HashiCorp. 
 
 - A versão Enterprise é ideal para empresas que possuem requisitos de segurança e conformidade rigorosos, ou que desejam ter controle total sobre seus dados e infraestrutura.
+
+## Run Triggers
+
+- Os Run Triggers são uma funcionalidade do HCP Terraform usados para criar dependências entre workspaces. Eles permitem que um workspace dispare a execução de outro workspace quando um plano é aplicado com sucesso.
+
+- Por exemplo, você pode ter um workspace para a infraestrutura de rede e outro para a infraestrutura de aplicação. Quando o plano do workspace de rede é aplicado com sucesso, ele pode disparar automaticamente o plano do workspace de aplicação, garantindo que as mudanças sejam aplicadas na ordem correta.
